@@ -9,11 +9,18 @@ import java.util.List;
  * of times you have to multiply digits with each other until you have a single
  * character.
  * 
- * examples: persistence(39) == 3 because 39 = 27, 27 = 14, 14=4 and 4 is one
- * digit
+ * examples: persistence(39) == 3 because 
+ * 1) 3*9 = 27, 
+ * 2) 2*7 = 14,
+ * 3) 1*4 = 4 
+ * 4) 4 is a single digit
  * 
- * persistence(999) == 4 because 999 = 729, 729 = 126, 126 = 12, 12 = 2
- * 
+ * persistence(999) == 4 because :
+ * 1) 9*9*9 = 729, 
+ * 2) 7*2*9 = 126,
+ * 3) 1*2*6 = 12,
+ * 4) 1*2 = 2 
+ * 2 is a single digit
  * persistence(4) == 0 because 4 is already a single digit
  */
 
@@ -59,12 +66,12 @@ public class Persistenza {
 	}
 
 	/**
-	 * prerequisito paramenti: numeri interi e positivi
+	 * prerequisito paramenti: numeri interi e positivi e indice inferiore
+         * alla lunghezza del numero passato in input.
 	 * 
 	 * @param numero intero
-	 * @param indice di interesse Integer
-	 * @return singola cifra del numero passato come parametro presente nella
-	 *         posizione dell'indice passato come parametro
+	 * @param indice
+	 * @return il numero presente all'indice 
 	 */
 	static int intAt(Integer numero, int indice) {
 		return numero.toString().charAt(indice) - 48;
